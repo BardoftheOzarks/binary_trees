@@ -2,9 +2,9 @@
 size_t bL(const binary_tree_t *tree);
 size_t bS(const binary_tree_t *tree);
 /**
-*
-*
-*
+* binary_tree_nodes - returns the number of nodes
+* @tree: the number of nodes
+* Return: number of nodes
 */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
@@ -32,7 +32,7 @@ size_t bL(const binary_tree_t *tree)
 size_t bS(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return 0;
+		return (0);
 	return (bS(tree->left) + 1
 		+ bS(tree->right));
 }
