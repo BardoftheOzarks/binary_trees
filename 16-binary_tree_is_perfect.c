@@ -9,7 +9,7 @@ size_t bL(const binary_tree_t *tree);
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	size_t h, tn;
+	size_t h, tn, ans;
 	const binary_tree_t *nav = tree;
 
 	if (tree == NULL)
@@ -20,7 +20,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	h = (bH(nav) * 2);
 	tn = bL(nav);
-	if (h == tn)
+	ans = (2^(h+1))- 1;
+	if (h == tn || ans == 0)
 		return (1);
 	return (0);
 }
