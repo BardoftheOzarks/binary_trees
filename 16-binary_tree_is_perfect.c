@@ -5,7 +5,7 @@ size_t bL(const binary_tree_t *tree);
 /**
 * binary_tree_is_perfect - checks if perfect
 * @tree: tree to check
-* Return: 1 if perfect and 
+* Return: 1 if perfect
 */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -20,8 +20,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	h = (bH(nav) * 2);
 	tn = bL(nav);
-	printf("%lu h, %lu tn", (unsigned long)h, (unsigned long)tn);
- 	if (h == tn)
+	if (h == tn)
 		return (1);
 	return (0);
 }
