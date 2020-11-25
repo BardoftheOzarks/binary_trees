@@ -18,10 +18,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	while (nav->parent != NULL)
 		nav = nav->parent;
 
-	h = (bH(nav) * 2);
+	h = bH(nav);
 	tn = bL(nav);
-	ans = (2^(h+1))- 1;
-	if (h == tn || ans == 0)
+	ans = (2 ^ (h + 1)) - 1;
+	if ((h * 2) == tn || ans == 0)
 		return (1);
 	return (0);
 }
